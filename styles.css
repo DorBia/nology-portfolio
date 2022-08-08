@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Nunito:wght@400;700&family=Ubuntu+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  text-decoration: none;
+}
+
+.button {
+  background-color: #BAE8E8;
+  border: 1px solid #BAE8E8;
+  color: #272643;
+  border-radius: 8px;
+  padding: 7px 20px;
+}
+
+body {
+  background-color: #fefdf8;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  padding: 5px;
+}
+
+header {
+  height: 70px;
+  background-color: #272643;
+  color: #8C9CB1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .title {
+  margin: auto 50px;
+}
+header .menu {
+  margin: auto 50px;
+  width: 30%;
+}
+header .menu ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .menu ul li a {
+  color: inherit;
+}
+
+main {
+  margin: 100px auto;
+  height: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+main section {
+  margin: 50px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+main .skills {
+  display: flex;
+  height: 30%;
+}
+main .skills ul {
+  margin: 20px auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .skills ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .skills ul li p {
+  margin: 10px auto;
+  color: #8C9CB1;
+}
+main .projects {
+  display: flex;
+}
+main .projects ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 50px;
+}
+main .projects ul li {
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  height: 70px;
+  background-color: #272643;
+  color: #8C9CB1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer #email {
+  margin: auto 50px;
+}
+footer .social-media {
+  margin: auto 50px;
+  width: 10%;
+}
+footer .social-media ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .social-media ul li a {
+  color: inherit;
+}
+
+a:hover {
+  background-color: #616886;
+  border-color: #616886;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #616886;
+}
