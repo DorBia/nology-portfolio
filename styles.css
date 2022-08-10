@@ -1,32 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Nunito:wght@400;700&family=Ubuntu+Mono:wght@700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-
-.button {
-  background-color: #BAE8E8;
-  border: 1px solid #BAE8E8;
-  color: #272643;
-  border-radius: 8px;
-  padding: 7px 20px;
-}
-
-body {
-  background-color: #fefdf8;
-  color: #272643;
-  font-family: "Nunito", sans-serif;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  padding: 5px;
-}
-
 header {
   position: fixed;
   width: 100%;
@@ -40,7 +12,7 @@ header {
 header .title {
   margin: auto 50px;
 }
-header .title h1 {
+header .title__h1 {
   font-family: "Ubuntu Mono", monospace;
   color: #8C9CB1;
 }
@@ -48,23 +20,23 @@ header .menu {
   margin: auto 50px;
   width: 30%;
 }
-header .menu ul {
+header .menu__list {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-header .menu ul li a {
+header .menu__list__item a {
   color: #8C9CB1;
 }
-header .menu ul li a:hover {
+header .menu__list__item a:hover {
   background-color: #616886;
   border-color: #616886;
   border-radius: 5px;
 }
-header .menu ul .button a {
+header .menu__list .button a {
   color: #272643;
 }
-header .menu ul .button:hover a {
+header .menu__list .button:hover a {
   color: #fefdf8;
 }
 
@@ -92,39 +64,39 @@ main .introduction {
   display: flex;
   justify-content: space-around;
 }
-main .introduction h3 {
+main .introduction__h3 {
   color: #8C9CB1;
 }
 main .skills {
   display: flex;
   height: 30%;
 }
-main .skills ul {
+main .skills__list {
   margin: 20px auto;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-main .skills ul li {
+main .skills__list__item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main .skills ul li p {
+main .skills__list__item p {
   margin: 10px auto;
   color: #8C9CB1;
 }
 main .projects {
   display: flex;
 }
-main .projects ul {
+main .projects__list {
   width: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 50px;
 }
-main .projects ul li {
+main .projects__list__item {
   padding: 20px;
   text-align: center;
 }
@@ -161,21 +133,11 @@ footer .social-media ul li a {
   color: #8C9CB1;
 }
 
-.button:hover {
-  background-color: #616886;
-  border-color: #616886;
-  border-radius: 5px;
-}
-
-.button:hover {
-  color: #fefdf8;
-}
-
 @media screen and (max-width: 1050px) {
   header .menu {
     width: 50%;
   }
-  header .menu ul {
+  header .menu__list {
     justify-content: space-between;
   }
 }
@@ -187,10 +149,10 @@ footer .social-media ul li a {
     margin: auto 20px;
   }
 
-  main .skills h3 {
+  main .skills__h3 {
     margin: 20px;
   }
-  main .skills .skill-list {
+  main .skills__list {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
   }
@@ -212,7 +174,7 @@ footer .social-media ul li a {
   header .menu {
     width: 90%;
   }
-  header .menu ul {
+  header .menu__list {
     justify-content: space-around;
   }
 
@@ -239,10 +201,10 @@ footer .social-media ul li a {
   main .introduction {
     height: 15%;
   }
-  main .introduction h3 {
+  main .introduction__h3 {
     font-size: 17px;
   }
-  main .introduction h1 {
+  main .introduction__h1 {
     font-size: 20px;
   }
 
@@ -255,7 +217,7 @@ footer .social-media ul li a {
     border: none;
     box-shadow: none;
   }
-  main .introduction h1 {
+  main .introduction__h1 {
     text-align: center;
   }
 }
@@ -268,14 +230,14 @@ footer .social-media ul li a {
     height: 2100px;
     justify-content: space-around;
   }
-  main .skills .skill-list {
+  main .skills__list {
     grid-template-columns: auto auto auto auto;
   }
-  main .skills .skill-list .sb {
+  main .skills__list .sb {
     grid-area: 3/2/4/3;
     justify-content: space-between;
   }
-  main .skills .skill-list .python {
+  main .skills__list .python {
     grid-area: 3/3/4/4;
     justify-content: space-between;
   }
@@ -289,4 +251,41 @@ footer .social-media ul li a {
   footer .social-media {
     margin: auto 25px;
   }
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.button {
+  background-color: #BAE8E8;
+  border: 1px solid #BAE8E8;
+  color: #272643;
+  border-radius: 8px;
+  padding: 7px 20px;
+}
+
+body {
+  background-color: #fefdf8;
+  color: #272643;
+  font-family: "Nunito", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  padding: 5px;
+}
+
+.button:hover {
+  background-color: #616886;
+  border-color: #616886;
+  border-radius: 5px;
+}
+
+.button:hover {
+  color: #fefdf8;
 }

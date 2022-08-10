@@ -1,0 +1,50 @@
+@use "../vars/variables" as *;
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 70px;
+    background-color: $color-footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+        margin: auto 50px;
+        &__h1 {
+            font-family: $font-logo;
+            color: $color-secondary;
+        }
+    }
+
+    .menu {
+        margin: auto 50px;
+        width: 30%;
+        &__list {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            &__item {
+                a {
+                    color: $color-secondary;
+                }
+                a:hover {
+                    background-color: $color-hover;
+                    border-color: $color-hover;
+                    border-radius: 5px;
+                }
+            }
+            .button {
+                a{
+                    color: $color-primary;
+                }
+            }
+            .button:hover {
+                a {
+                    color: $color-background;
+                }
+            }
+        }
+    }
+}
