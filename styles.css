@@ -1,4 +1,266 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Nunito:wght@400;700&family=Ubuntu+Mono:wght@700&display=swap");
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 70px;
+  background-color: #272643;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .title {
+  margin: auto 50px;
+}
+header .title__h1 {
+  font-family: "Ubuntu Mono", monospace;
+  color: #8C9CB1;
+}
+header .menu {
+  margin: auto 50px;
+  width: 30%;
+}
+header .menu__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .menu__list__item a {
+  color: #8C9CB1;
+}
+header .menu__list__item a:hover {
+  background-color: #616886;
+  border-color: #616886;
+  border-radius: 5px;
+}
+header .menu__list .button a {
+  color: #272643;
+}
+header .menu__list .button:hover a {
+  color: #fefdf8;
+}
+
+main {
+  margin: 100px auto;
+  height: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+main section {
+  margin: 50px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+main .introduction {
+  height: 20%;
+  border: 1px solid #fefdf8;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 4px #e3e3e3;
+  display: flex;
+  justify-content: space-around;
+}
+main .introduction__h3 {
+  color: #8C9CB1;
+}
+main .skills {
+  display: flex;
+  height: 30%;
+}
+main .skills__list {
+  margin: 20px auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .skills__list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .skills__list__item p {
+  margin: 10px auto;
+  color: #8C9CB1;
+}
+main .projects {
+  display: flex;
+}
+main .projects__list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 50px;
+}
+main .projects__list__item {
+  padding: 20px;
+  text-align: center;
+}
+main .about {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  width: 100%;
+  height: 70px;
+  background-color: #272643;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+}
+footer .contact__email {
+  margin: auto 50px;
+  color: #8C9CB1;
+}
+footer .social-media {
+  margin: auto 50px;
+  width: 10%;
+}
+footer .social-media__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .social-media__list__item a {
+  color: #8C9CB1;
+}
+
+@media screen and (max-width: 1050px) {
+  header .menu {
+    width: 50%;
+  }
+  header .menu__list {
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 875px) {
+  header .title {
+    margin: auto 20px;
+  }
+  header .menu {
+    margin: auto 20px;
+  }
+
+  main .introduction {
+    padding: 20px;
+  }
+  main .introduction__h1 {
+    margin: 30px;
+  }
+  main .skills__h3 {
+    margin: 20px;
+  }
+  main .skills__list {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+  }
+  main .about__h1 {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    height: 1700px;
+  }
+}
+@media screen and (max-width: 650px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  header {
+    height: 100px;
+    flex-direction: column;
+  }
+  header .menu {
+    width: 90%;
+  }
+  header .menu__list {
+    justify-content: space-around;
+  }
+
+  main {
+    margin-right: 0;
+    width: 100%;
+  }
+  main section {
+    width: 90%;
+    margin: 50px 0;
+  }
+
+  footer {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 525px) {
+  main {
+    margin-bottom: 50px;
+  }
+  main section {
+    margin: 30px;
+  }
+  main .introduction {
+    height: 15%;
+  }
+  main .introduction__h3 {
+    font-size: 17px;
+  }
+  main .introduction__h1 {
+    font-size: 20px;
+  }
+
+  footer #email {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 435px) {
+  main .introduction {
+    border: none;
+    box-shadow: none;
+  }
+  main .introduction__h1 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 390px) {
+  header .menu {
+    font-size: 0.8em;
+  }
+
+  main {
+    height: 2100px;
+    justify-content: space-around;
+  }
+  main .skills__list {
+    grid-template-columns: auto auto auto auto;
+  }
+  main .skills__list .sb {
+    grid-area: 3/2/4/3;
+    justify-content: space-between;
+  }
+  main .skills__list .python {
+    grid-area: 3/3/4/4;
+    justify-content: space-between;
+  }
+
+  footer {
+    justify-content: center;
+  }
+  footer .contact__email {
+    margin: auto 10px;
+  }
+  footer .social-media {
+    margin: auto 25px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -27,140 +289,6 @@ a {
   padding: 5px;
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  height: 70px;
-  background-color: #272643;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header .title {
-  margin: auto 50px;
-}
-header .title h1 {
-  font-family: "Ubuntu Mono", monospace;
-  color: #8C9CB1;
-}
-header .menu {
-  margin: auto 50px;
-  width: 30%;
-}
-header .menu ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-header .menu ul li a {
-  color: #8C9CB1;
-}
-header .menu ul li a:hover {
-  background-color: #616886;
-  border-color: #616886;
-  border-radius: 5px;
-}
-header .menu ul .button a {
-  color: #272643;
-}
-header .menu ul .button:hover a {
-  color: #fefdf8;
-}
-
-main {
-  margin: 100px auto;
-  height: 1500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-main section {
-  margin: 50px;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-main .introduction {
-  height: 20%;
-  border: 1px solid #fefdf8;
-  border-radius: 10px;
-  box-shadow: 0 0 3px 4px #e3e3e3;
-  display: flex;
-  justify-content: space-around;
-}
-main .introduction h3 {
-  color: #8C9CB1;
-}
-main .skills {
-  display: flex;
-  height: 30%;
-}
-main .skills ul {
-  margin: 20px auto;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-main .skills ul li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main .skills ul li p {
-  margin: 10px auto;
-  color: #8C9CB1;
-}
-main .projects {
-  display: flex;
-}
-main .projects ul {
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 50px;
-}
-main .projects ul li {
-  padding: 20px;
-  text-align: center;
-}
-main .about {
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-footer {
-  width: 100%;
-  height: 70px;
-  background-color: #272643;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  bottom: 0;
-}
-footer #email {
-  margin: auto 50px;
-  color: #8C9CB1;
-}
-footer .social-media {
-  margin: auto 50px;
-  width: 10%;
-}
-footer .social-media ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-footer .social-media ul li a {
-  color: #8C9CB1;
-}
-
 .button:hover {
   background-color: #616886;
   border-color: #616886;
@@ -169,124 +297,4 @@ footer .social-media ul li a {
 
 .button:hover {
   color: #fefdf8;
-}
-
-@media screen and (max-width: 1050px) {
-  header .menu {
-    width: 50%;
-  }
-  header .menu ul {
-    justify-content: space-between;
-  }
-}
-@media screen and (max-width: 875px) {
-  header .title {
-    margin: auto 20px;
-  }
-  header .menu {
-    margin: auto 20px;
-  }
-
-  main .skills h3 {
-    margin: 20px;
-  }
-  main .skills .skill-list {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-  }
-}
-@media screen and (max-width: 768px) {
-  main {
-    height: 1700px;
-  }
-}
-@media screen and (max-width: 650px) {
-  html, body {
-    overflow-x: hidden;
-  }
-
-  header {
-    height: 100px;
-    flex-direction: column;
-  }
-  header .menu {
-    width: 90%;
-  }
-  header .menu ul {
-    justify-content: space-around;
-  }
-
-  main {
-    margin-right: 0;
-    width: 100%;
-  }
-  main section {
-    width: 90%;
-    margin: 50px 0;
-  }
-
-  footer {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 525px) {
-  main {
-    margin-bottom: 50px;
-  }
-  main section {
-    margin: 30px;
-  }
-  main .introduction {
-    height: 15%;
-  }
-  main .introduction h3 {
-    font-size: 17px;
-  }
-  main .introduction h1 {
-    font-size: 20px;
-  }
-
-  footer #email {
-    margin-left: 10px;
-  }
-}
-@media screen and (max-width: 435px) {
-  main .introduction {
-    border: none;
-    box-shadow: none;
-  }
-  main .introduction h1 {
-    text-align: center;
-  }
-}
-@media screen and (max-width: 390px) {
-  header .menu {
-    font-size: 0.8em;
-  }
-
-  main {
-    height: 2100px;
-    justify-content: space-around;
-  }
-  main .skills .skill-list {
-    grid-template-columns: auto auto auto auto;
-  }
-  main .skills .skill-list .sb {
-    grid-area: 3/2/4/3;
-    justify-content: space-between;
-  }
-  main .skills .skill-list .python {
-    grid-area: 3/3/4/4;
-    justify-content: space-between;
-  }
-
-  footer {
-    justify-content: center;
-  }
-  footer #email {
-    margin: auto 10px;
-  }
-  footer .social-media {
-    margin: auto 25px;
-  }
 }
