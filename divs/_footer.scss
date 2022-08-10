@@ -9,7 +9,7 @@ footer {
     align-items: center;
     bottom: 0;
 
-    #email {
+    .contact__email {
         margin: auto 50px;
         color: $color-secondary;
     }
@@ -17,11 +17,11 @@ footer {
     .social-media {
         margin: auto 50px;
         width: 10%;
-        ul {
+        &__list {
           display: flex;
           justify-content: space-around;
           align-items: center;
-          li {
+          &__item {
               a {
                   color: $color-secondary;;
               }

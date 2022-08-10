@@ -116,7 +116,7 @@ footer {
   align-items: center;
   bottom: 0;
 }
-footer #email {
+footer .contact__email {
   margin: auto 50px;
   color: #8C9CB1;
 }
@@ -124,12 +124,12 @@ footer .social-media {
   margin: auto 50px;
   width: 10%;
 }
-footer .social-media ul {
+footer .social-media__list {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-footer .social-media ul li a {
+footer .social-media__list__item a {
   color: #8C9CB1;
 }
 
@@ -149,12 +149,21 @@ footer .social-media ul li a {
     margin: auto 20px;
   }
 
+  main .introduction {
+    padding: 20px;
+  }
+  main .introduction__h1 {
+    margin: 30px;
+  }
   main .skills__h3 {
     margin: 20px;
   }
   main .skills__list {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
+  }
+  main .about__h1 {
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -245,7 +254,7 @@ footer .social-media ul li a {
   footer {
     justify-content: center;
   }
-  footer #email {
+  footer .contact__email {
     margin: auto 10px;
   }
   footer .social-media {

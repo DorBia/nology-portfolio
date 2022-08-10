@@ -23,6 +23,13 @@
     }
 
     main {
+        .introduction {
+            padding: 20px;
+
+            &__h1 {
+                margin: 30px;
+            }
+        }
         .skills {
             &__h3 {
                 margin: 20px;
@@ -30,6 +37,12 @@
             &__list {
                 display: grid;
                 grid-template-columns: auto auto auto auto auto;
+            }
+        }
+
+        .about {
+            &__h1 {
+                margin-bottom: 30px;
             }
         }
     }
@@ -132,7 +145,7 @@
     }
     footer {
         justify-content: center;
-        #email {
+        .contact__email {
             margin: auto 10px;
         }
         .social-media {
