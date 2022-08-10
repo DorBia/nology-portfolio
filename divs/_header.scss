@@ -12,6 +12,7 @@ header {
 
     .title {
         margin: auto 50px;
+
         &__h1 {
             font-family: $font-logo;
             color: $color-secondary;
@@ -21,29 +22,28 @@ header {
     .menu {
         margin: auto 50px;
         width: 30%;
+
         &__list {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            &__item {
-                a {
-                    color: $color-secondary;
-                }
-                a:hover {
-                    background-color: $color-hover;
-                    border-color: $color-hover;
-                    border-radius: 5px;
-                }
+        }
+
+        &__button {
+            color: $color-primary;
+
+            &:hover {
+                color: $color-background;
             }
-            .button {
-                a{
-                    color: $color-primary;
-                }
-            }
-            .button:hover {
-                a {
-                    color: $color-background;
-                }
+        }
+
+        &__item {
+            color: $color-secondary;
+
+            &:hover {
+                background-color: $color-hover;
+                border-color: $color-hover;
+                border-radius: 5px;
             }
         }
     }

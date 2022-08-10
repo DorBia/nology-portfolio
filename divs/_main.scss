@@ -29,43 +29,45 @@ main {
             color: $color-secondary;
         }
     }
+    
     .skills {
         display: flex;
         height: 30%;
+
         &__list {
             margin: 20px auto;
             width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+        }
 
-
-            &__item {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                
-                p {
-                    margin: 10px auto;
-                    color: $color-secondary;
-                }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            p {
+                margin: 10px auto;
+                color: $color-secondary;
             }
         }
     }
 
     .projects {
         display: flex;
+
         &__list {
             width: 100%;
             display: grid;
             grid-template-columns: auto auto auto;
             padding: 50px;
-
-            &__item {
-                padding: 20px;
-                text-align: center;
-            }
         }
+
+        &__item {
+            padding: 20px;
+            text-align: center;
+        } 
     }
 
     .about {

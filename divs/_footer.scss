@@ -17,15 +17,11 @@ footer {
     .social-media {
         margin: auto 50px;
         width: 10%;
+        
         &__list {
           display: flex;
           justify-content: space-around;
           align-items: center;
-          &__item {
-              a {
-                  color: $color-secondary;;
-              }
-          }
         }
       }    
 }

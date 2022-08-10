@@ -4,6 +4,7 @@
     header {
         .menu {
             width: 50%;
+
             &__list {
                 justify-content: space-between;
             }
@@ -30,10 +31,12 @@
                 margin: 30px;
             }
         }
+
         .skills {
             &__h3 {
                 margin: 20px;
             }
+
             &__list {
                 display: grid;
                 grid-template-columns: auto auto auto auto auto;
@@ -59,27 +62,35 @@
     html, body {
         overflow-x: hidden;
     }
+
     header {
         height:100px;
         flex-direction: column;
 
         .menu {
             width: 90%;
+
             &__list {
                 justify-content: space-around;
             }
         }
     }
+
     main {
         margin-right: 0;
         width: 100%;
+
         section {
             width: 90%;
             margin: 50px 0;
         }
-    }
-    footer {
-        width: 100%;
+
+        .introduction {
+            &__h1 {
+                font-size: 23px;
+                text-align: center;
+            }
+        }
     }
 }
 
@@ -87,12 +98,14 @@
 
     main {
         margin-bottom: 50px;
+
         section {
             margin: 30px;
         }
 
         .introduction {
             height: 15%;
+
             &__h3 {
                 font-size: 17px;
             }
@@ -102,17 +115,19 @@
         }
     }
     footer {
-        #email {
+        .contact__email {
             margin-left: 10px;
         }
     }
 }
 
 @media screen and (max-width: 435px) {
+
     main {
         .introduction {
             border: none;
             box-shadow: none;
+
             &__h1 {
                 text-align: center;
             }
@@ -121,21 +136,26 @@
 }
 
 @media screen and (max-width: 390px) {
+
     header {
         .menu {
             font-size: 0.8em;
         }
     }
+
     main {
         height: 2100px;
         justify-content: space-around;
+
         .skills {
             &__list {
                 grid-template-columns: auto auto auto auto;
+
                 .sb {
                     grid-area: 3/2/4/3;
                     justify-content: space-between;
                 }
+
                 .python {
                     grid-area: 3/3/4/4;
                     justify-content: space-between;
@@ -143,11 +163,14 @@
             }
         }
     }
+
     footer {
         justify-content: center;
+
         .contact__email {
             margin: auto 10px;
         }
+
         .social-media {
             margin: auto 25px;
         }

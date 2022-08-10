@@ -25,19 +25,19 @@ header .menu__list {
   justify-content: space-around;
   align-items: center;
 }
-header .menu__list__item a {
+header .menu__button {
+  color: #272643;
+}
+header .menu__button:hover {
+  color: #fefdf8;
+}
+header .menu__item {
   color: #8C9CB1;
 }
-header .menu__list__item a:hover {
+header .menu__item:hover {
   background-color: #616886;
   border-color: #616886;
   border-radius: 5px;
-}
-header .menu__list .button a {
-  color: #272643;
-}
-header .menu__list .button:hover a {
-  color: #fefdf8;
 }
 
 main {
@@ -78,12 +78,12 @@ main .skills__list {
   flex-direction: row;
   justify-content: space-between;
 }
-main .skills__list__item {
+main .skills__item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main .skills__list__item p {
+main .skills__item p {
   margin: 10px auto;
   color: #8C9CB1;
 }
@@ -96,7 +96,7 @@ main .projects__list {
   grid-template-columns: auto auto auto;
   padding: 50px;
 }
-main .projects__list__item {
+main .projects__item {
   padding: 20px;
   text-align: center;
 }
@@ -128,9 +128,6 @@ footer .social-media__list {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-footer .social-media__list__item a {
-  color: #8C9CB1;
 }
 
 @media screen and (max-width: 1050px) {
@@ -195,9 +192,9 @@ footer .social-media__list__item a {
     width: 90%;
     margin: 50px 0;
   }
-
-  footer {
-    width: 100%;
+  main .introduction__h1 {
+    font-size: 23px;
+    text-align: center;
   }
 }
 @media screen and (max-width: 525px) {
@@ -217,7 +214,7 @@ footer .social-media__list__item a {
     font-size: 20px;
   }
 
-  footer #email {
+  footer .contact__email {
     margin-left: 10px;
   }
 }
