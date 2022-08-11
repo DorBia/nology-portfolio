@@ -1,79 +1,110 @@
 @use "../vars/variables" as *;
 
 main {
-    margin: 100px auto;
-    height: 1500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    grid-area: main;
+    width: 100%;
+    margin: 50px auto 90px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(150px, auto);
+    grid-template-areas:
+    "introduction introduction"
+    "skills skills"
+    "projects projects"
+    "about about";
 
     section {
-        margin: 50px;
         width: 80%;
+        margin: 50px auto;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
     }
+}
 
-    .introduction {
-        height: 20%;
-        border: 1px solid $color-background;
-        border-radius: 10px;
-        box-shadow: 0 0 3px 4px #e3e3e3;
-        display: flex;
-        justify-content: space-around;
+.introduction {
+    width: 90%;
+    height: 90%;
+    grid-area: introduction;
+    border: 1px solid $color-background;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 4px #e3e3e3;
+    display: flex;
+    justify-content: space-around;
 
-        &__h3 {
-            color: $color-secondary;
-        }
-    }
-    
-    .skills {
-        display: flex;
-        height: 30%;
+            &__h3 {
+                font-size: 17px;
+                color: $color-secondary;
+            }
+            &__h1 {
+                font-size: 20px;
+                padding: 10px;
+                text-align: center;
+            }
+}
 
-        &__list {
-            margin: 20px auto;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
+.skills {
+    height: 95%;
+    grid-area: skills;
+    display: flex;
+    justify-content: space-around;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        .sb {
+            grid-area: 3/2/4/3;
             justify-content: space-between;
         }
 
-        &__item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            
-            p {
-                margin: 10px auto;
-                color: $color-secondary;
-            }
+        .python {
+            grid-area: 3/3/4/4;
+            justify-content: space-between;
         }
     }
 
-    .projects {
-        display: flex;
-
-        &__list {
-            width: 100%;
-            display: grid;
-            grid-template-columns: auto auto auto;
-            padding: 50px;
-        }
-
-        &__item {
-            padding: 20px;
-            text-align: center;
-        } 
-    }
-
-    .about {
-        height: 30%;
+    &__item {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        align-items: center;
+        
+        p {
+            margin: 10px auto;
+            color: $color-secondary;
+        }
+        
     }
+}
+
+.projects {
+    height: 100%;
+    grid-area: projects;
+    display: flex;
+
+        &__list {
+            margin: 0 20px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 10px;
+            justify-items: center;
+        }
+
+        &__item {
+            width: 130px;
+            height: 130px;
+            background-color: $color-secondary;
+            border-radius: 5px;
+            margin-bottom: 20px
+            // padding: 20px;
+        } 
+}
+
+.about {
+    height: 100%;
+    grid-area: about;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
