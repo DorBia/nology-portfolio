@@ -1,178 +1,102 @@
 @use "../vars/variables" as *;
 
-@media screen and (max-width: 1050px) {
+@media screen and (min-width: 768px) {
     header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+            margin: 20px;
+        }
+
         .menu {
             width: 50%;
-
-            &__list {
-                justify-content: space-between;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 875px) {
-    header {
-        .title {
-            margin: auto 20px;
-        }
-
-        .menu {
-            margin: auto 20px;
+            margin: 20px;
+            font-size: 1rem;
         }
     }
 
     main {
-        .introduction {
-            padding: 20px;
-
-            &__h1 {
-                margin: 30px;
-            }
-        }
-
         .skills {
-            &__h3 {
-                margin: 20px;
-            }
 
             &__list {
-                display: grid;
-                grid-template-columns: auto auto auto auto auto;
-            }
-        }
-
-        .about {
-            &__h1 {
-                margin-bottom: 30px;
-            }
-        }
-    }
-    
-}
-
-@media screen and (max-width: 768px) {
-    main {
-        height: 1700px;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    html, body {
-        overflow-x: hidden;
-    }
-
-    header {
-        height:100px;
-        flex-direction: column;
-
-        .menu {
-            width: 90%;
-
-            &__list {
-                justify-content: space-around;
-            }
-        }
-    }
-
-    main {
-        margin-right: 0;
-        width: 100%;
-
-        section {
-            width: 90%;
-            margin: 50px 0;
-        }
-
-        .introduction {
-            &__h1 {
-                font-size: 23px;
-                text-align: center;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 525px) {
-
-    main {
-        margin-bottom: 50px;
-
-        section {
-            margin: 30px;
-        }
-
-        .introduction {
-            height: 15%;
-
-            &__h3 {
-                font-size: 17px;
-            }
-            &__h1 {
-                font-size: 20px;
-            }
-        }
-    }
-    footer {
-        .contact__email {
-            margin-left: 10px;
-        }
-    }
-}
-
-@media screen and (max-width: 435px) {
-
-    main {
-        .introduction {
-            border: none;
-            box-shadow: none;
-
-            &__h1 {
-                text-align: center;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 390px) {
-
-    header {
-        .menu {
-            font-size: 0.8em;
-        }
-    }
-
-    main {
-        height: 2100px;
-        justify-content: space-around;
-
-        .skills {
-            &__list {
-                grid-template-columns: auto auto auto auto;
-
+                grid-template-columns: repeat(5, 1fr);
+                width: 90%;
+            
                 .sb {
-                    grid-area: 3/2/4/3;
-                    justify-content: space-between;
+                    grid-area: 2 / 4 / 3 /5;
                 }
-
                 .python {
-                    grid-area: 3/3/4/4;
-                    justify-content: space-between;
+                    grid-area: 2 / 5 / 3 /6;
                 }
+            }
+        }
+
+        .projects {
+            &__item {
+                width: 200px;
+                height: 200px;
             }
         }
     }
 
     footer {
-        justify-content: center;
+        justify-content: space-between;
 
         .contact__email {
-            margin: auto 10px;
+            margin-left: 3rem;
+            font-size: 1.1rem;
         }
 
         .social-media {
-            margin: auto 25px;
+            margin-right: 3rem;
+        }
+
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    main {
+        .projects__item {
+            width: 250px;
+            height: 250px;
         }
     }
+}
+
+@media screen and (min-width: 1280px) {
+
+    main {
+        row-gap: 4rem;
+    }
+
+    .introduction {
+        padding: 1.5rem 0;
+        margin-bottom: 2rem;
+    }
+
+    .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "h3 list"
+        "paragraph list";
+        justify-items: center;
+
+            &__h3 {
+                grid-area: h3;
+                font-size: 3rem;
+                padding-top: 3rem; 
+            }
+
+            &__paragraph {
+                grid-area: paragraph;
+            }
+
+            &__list {
+                grid-area: list;
+            }
+    }
+    
 }

@@ -7,7 +7,6 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  height: 110px;
   background-color: #272643;
 }
 header .title {
@@ -46,15 +45,16 @@ header .menu__item:hover {
 main {
   grid-area: main;
   width: 100%;
-  margin: 50px auto 90px auto;
+  margin: 3rem auto 5.5rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(150px, auto);
+  grid-template-rows: minmax(10rem, auto);
+  row-gap: 2rem;
   grid-template-areas: "introduction introduction" "skills skills" "projects projects" "about about";
 }
 main section {
   width: 80%;
-  margin: 50px auto;
+  margin: 3rem auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -72,11 +72,11 @@ main section {
   justify-content: space-around;
 }
 .introduction__h3 {
-  font-size: 17px;
+  font-size: 1.1rem;
   color: #8C9CB1;
 }
 .introduction__h1 {
-  font-size: 20px;
+  font-size: 1.25rem;
   padding: 10px;
   text-align: center;
 }
@@ -119,7 +119,7 @@ main section {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 10px;
+  column-gap: 1rem;
   justify-items: center;
 }
 .projects__item {
@@ -127,7 +127,7 @@ main section {
   height: 130px;
   background-color: #8C9CB1;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 1.2rem;
 }
 
 .about {
@@ -141,7 +141,7 @@ main section {
 footer {
   grid-area: footer;
   width: 100%;
-  height: 70px;
+  height: 4.5rem;
   background-color: #272643;
   display: flex;
   justify-content: center;
@@ -149,11 +149,10 @@ footer {
   bottom: 0;
 }
 footer .contact__email {
-  margin: auto 10px;
+  margin-right: 2rem;
   color: #8C9CB1;
 }
 footer .social-media {
-  margin: auto 25px;
   width: 10%;
 }
 footer .social-media__list {
@@ -213,4 +212,80 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: minmax(60px, auto);
   grid-template-areas: "header header" "main main" "main main" "main main" "main main" "footer footer";
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .title {
+    margin: 20px;
+  }
+  header .menu {
+    width: 50%;
+    margin: 20px;
+    font-size: 1rem;
+  }
+
+  main .skills__list {
+    grid-template-columns: repeat(5, 1fr);
+    width: 90%;
+  }
+  main .skills__list .sb {
+    grid-area: 2/4/3/5;
+  }
+  main .skills__list .python {
+    grid-area: 2/5/3/6;
+  }
+  main .projects__item {
+    width: 200px;
+    height: 200px;
+  }
+
+  footer {
+    justify-content: space-between;
+  }
+  footer .contact__email {
+    margin-left: 3rem;
+    font-size: 1.1rem;
+  }
+  footer .social-media {
+    margin-right: 3rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  main .projects__item {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  main {
+    row-gap: 4rem;
+  }
+
+  .introduction {
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "h3 list" "paragraph list";
+    justify-items: center;
+  }
+  .skills__h3 {
+    grid-area: h3;
+    font-size: 3rem;
+    padding-top: 3rem;
+  }
+  .skills__paragraph {
+    grid-area: paragraph;
+  }
+  .skills__list {
+    grid-area: list;
+  }
 }
