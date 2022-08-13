@@ -1,21 +1,24 @@
 @use "../vars/variables" as *;
 
 main {
+
     grid-area: main;
     width: 100%;
-    margin: 3rem auto 5.5rem auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(10rem, auto);
+    grid-template-columns: 1fr 40fr 1fr;
+    grid-template-rows: minmax(5rem, auto);
     row-gap: 2rem;
     grid-template-areas:
-    "introduction introduction"
-    "skills skills"
-    "projects projects"
-    "about about";
+    ". . ."
+    ". introduction ."
+    ". skills ."
+    ". projects ."
+    ". about ."
+    ". . ."
+    ". . .";
 
-    section {
-        width: 80%;
+    div {
+        width: 90%;
         margin: 3rem auto;
         display: flex;
         flex-direction: column;
@@ -25,17 +28,17 @@ main {
 }
 
 .introduction {
-    width: 90%;
+    margin-top: 2rem;
+    padding: 1rem 0;
     height: 90%;
     grid-area: introduction;
     border: 1px solid $color-background;
     border-radius: 10px;
     box-shadow: 0 0 3px 4px #e3e3e3;
-    display: flex;
-    justify-content: space-around;
 
             &__h3 {
-                font-size: 1.1rem;
+                font-family: $font-handwriting;
+                font-size: 1.7rem;
                 color: $color-secondary;
             }
             &__h1 {
@@ -48,8 +51,6 @@ main {
 .skills {
     height: 95%;
     grid-area: skills;
-    display: flex;
-    justify-content: space-around;
 
     &__list {
         display: grid;
@@ -69,6 +70,10 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
         
         p {
             margin: 10px auto;
@@ -81,10 +86,8 @@ main {
 .projects {
     height: 100%;
     grid-area: projects;
-    display: flex;
 
         &__list {
-            margin: 0 20px;
             width: 100%;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -98,13 +101,19 @@ main {
             background-color: $color-secondary;
             border-radius: 5px;
             margin-bottom: 1.2rem;
+
+            &:hover {
+                transform: translate(5px, -5px);
+            }
         }
 }
 
 .about {
-    height: 100%;
     grid-area: about;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    height: 85%;
+    margin-bottom: 2rem;
+
+    &__h2 {
+        padding: 1rem;
+    }
 }

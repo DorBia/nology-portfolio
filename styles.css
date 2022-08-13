@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Nunito:wght@400;700&family=Ubuntu+Mono:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Nunito:wght@700&family=Ubuntu+Mono:wght@700&display=swap");
 header {
   grid-area: header;
   display: flex;
@@ -7,11 +7,12 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: #272643;
+  background-color: #2b294c;
+  z-index: 1;
 }
 header .title {
   align-self: center;
-  margin-top: 10px;
+  padding: 10px;
 }
 header .title__h1 {
   font-family: "Ubuntu Mono", monospace;
@@ -28,7 +29,7 @@ header .menu__list {
   align-items: center;
 }
 header .menu__button {
-  color: #272643;
+  color: #2b294c;
 }
 header .menu__button:hover {
   color: #fefdf8;
@@ -45,15 +46,14 @@ header .menu__item:hover {
 main {
   grid-area: main;
   width: 100%;
-  margin: 3rem auto 5.5rem auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(10rem, auto);
+  grid-template-columns: 1fr 40fr 1fr;
+  grid-template-rows: minmax(5rem, auto);
   row-gap: 2rem;
-  grid-template-areas: "introduction introduction" "skills skills" "projects projects" "about about";
+  grid-template-areas: ". . ." ". introduction ." ". skills ." ". projects ." ". about ." ". . ." ". . .";
 }
-main section {
-  width: 80%;
+main div {
+  width: 90%;
   margin: 3rem auto;
   display: flex;
   flex-direction: column;
@@ -62,17 +62,17 @@ main section {
 }
 
 .introduction {
-  width: 90%;
+  margin-top: 2rem;
+  padding: 1rem 0;
   height: 90%;
   grid-area: introduction;
   border: 1px solid #fefdf8;
   border-radius: 10px;
   box-shadow: 0 0 3px 4px #e3e3e3;
-  display: flex;
-  justify-content: space-around;
 }
 .introduction__h3 {
-  font-size: 1.1rem;
+  font-family: "Courgette", cursive;
+  font-size: 1.7rem;
   color: #8C9CB1;
 }
 .introduction__h1 {
@@ -84,8 +84,6 @@ main section {
 .skills {
   height: 95%;
   grid-area: skills;
-  display: flex;
-  justify-content: space-around;
 }
 .skills__list {
   display: grid;
@@ -104,6 +102,9 @@ main section {
   flex-direction: column;
   align-items: center;
 }
+.skills__item:hover {
+  transform: translateY(-5px);
+}
 .skills__item p {
   margin: 10px auto;
   color: #8C9CB1;
@@ -112,10 +113,8 @@ main section {
 .projects {
   height: 100%;
   grid-area: projects;
-  display: flex;
 }
 .projects__list {
-  margin: 0 20px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -129,24 +128,27 @@ main section {
   border-radius: 5px;
   margin-bottom: 1.2rem;
 }
+.projects__item:hover {
+  transform: translate(5px, -5px);
+}
 
 .about {
-  height: 100%;
   grid-area: about;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  height: 85%;
+  margin-bottom: 2rem;
+}
+.about__h2 {
+  padding: 1rem;
 }
 
 footer {
   grid-area: footer;
   width: 100%;
   height: 4.5rem;
-  background-color: #272643;
+  background-color: #2b294c;
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 0;
 }
 footer .contact__email {
   margin-right: 2rem;
@@ -159,59 +161,53 @@ footer .social-media__list {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-right: 1rem;
+}
+footer .social-media__item:hover {
+  transform: translateY(-3px);
 }
 
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
-}
-
-.button {
-  background-color: #BAE8E8;
-  border: 1px solid #BAE8E8;
-  color: #272643;
-  border-radius: 8px;
-  padding: 7px 20px;
+  list-style-type: none;
+  text-align: center;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #fefdf8;
-  color: #272643;
+  color: #2b294c;
   font-family: "Nunito", sans-serif;
-}
-
-ul {
-  list-style-type: none;
 }
 
 a {
   padding: 5px;
 }
 
-p {
-  text-align: center;
+h2 {
+  font-size: 1.8em;
 }
 
 html, body {
   overflow-x: hidden;
 }
 
+.button {
+  border-radius: 8px;
+  padding: 7px 20px;
+  background-color: #b0e7e7;
+  border: 1px solid #b0e7e7;
+  color: #2b294c;
+}
 .button:hover {
   background-color: #616886;
   border-color: #616886;
   border-radius: 5px;
-}
-
-.button:hover {
   color: #fefdf8;
-}
-
-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(60px, auto);
-  grid-template-areas: "header header" "main main" "main main" "main main" "main main" "footer footer";
 }
 
 @media screen and (min-width: 768px) {
@@ -262,30 +258,43 @@ body {
   }
 }
 @media screen and (min-width: 1280px) {
-  main {
-    row-gap: 4rem;
+  header .menu {
+    font-size: 1.2rem;
   }
 
-  .introduction {
+  main {
+    row-gap: 4rem;
+    margin-bottom: 0;
+  }
+  main .introduction {
     padding: 1.5rem 0;
     margin-bottom: 2rem;
   }
-
-  .skills {
+  main .introduction__h3 {
+    font-size: 2.2rem;
+  }
+  main .introduction__h1 {
+    font-size: 1.4rem;
+  }
+  main .skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "h3 list" "paragraph list";
     justify-items: center;
   }
-  .skills__h3 {
+  main .skills__h3 {
     grid-area: h3;
     font-size: 3rem;
     padding-top: 3rem;
   }
-  .skills__paragraph {
+  main .skills__paragraph {
     grid-area: paragraph;
   }
-  .skills__list {
+  main .skills__list {
     grid-area: list;
+  }
+  main .projects__list {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
   }
 }
