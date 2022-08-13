@@ -103,6 +103,7 @@ main div {
   align-items: center;
 }
 .skills__item:hover {
+  -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
 }
 .skills__item p {
@@ -129,6 +130,7 @@ main div {
   margin-bottom: 1.2rem;
 }
 .projects__item:hover {
+  -webkit-transform: translate(5px, -5px);
   transform: translate(5px, -5px);
 }
 
@@ -165,6 +167,7 @@ footer .social-media__list {
 }
 footer .social-media__item:hover {
   transform: translateY(-3px);
+  -webkit-transform: translateY(-3px);
 }
 
 * {

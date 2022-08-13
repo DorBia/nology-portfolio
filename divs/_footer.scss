@@ -25,7 +25,8 @@ footer {
       }
 
       &__item:hover {
-        transform: translateY(-3px)
+        transform: translateY(-3px);
+        -webkit-transform: translateY(-3px);
       }
     }
 }
